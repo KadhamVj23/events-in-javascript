@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js events</title>
+    <style>
+        #btn{
+            padding: 10px 14px;
+            background-color: red;
+            border: 2px solid black;
+            border-radius: 10px;
+            color: white;
+            cursor: pointer;
+            
+        }
+    </style>
+</head>
+
+<body>
+    <h1>the below are the types of events in javascript</h1>
+    <h3>browser events:</h3>
+    <ol>
+        <li>click</li>
+        <li>contextmenu</li>
+        <li>mouseover/mouseout</li>
+        <li>mousedown/mouseup</li>
+        <li>mousemove</li>
+    </ol>
+    <h2>Form events</h2>
+    <ul>
+        <li>submit</li>
+        <li>focus</li>
+        <li>DOMContentLoaded</li>
+    </ul>
+    <h3>For CSS</h3>
+    <ol>
+        <li>transitioned</li>
+    </ol>
+
+    <div class="container">
+        <h1>This is my heading</h1>
+        <p id="para">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sint quis harum veritatis placeat asperiores ab
+            accusamus nisi vero numquam odit? Consequatur illo veniam excepturi recusandae sequi optio maiores
+            voluptatem, similique dignissimos fugiat, ullam ipsum repellendus. Officiis consectetur excepturi expedita
+            commodi maiores dicta similique libero optio delectus iste nam itaque suscipit sequi illum, dolorum
+            corporis? Repudiandae nam natus amet. Voluptatibus ad, hic reprehenderit suscipit minima cupiditate eveniet
+            repellendus reiciendis explicabo dignissimos exercitationem unde, saepe esse quaerat! Error fugiat placeat
+            facere aliquid obcaecati dolorum fuga neque suscipit mollitia velit, excepturi, officiis praesentium nam?
+            Voluptatem aspernatur magni at, expedita accusamus assumenda numquam exercitationem, unde nihil quam
+            pariatur ad error obcaecati esse repellat in id vero minima mollitia excepturi officiis atque reprehenderit
+            tempora? Obcaecati eos amet, saepe explicabo placeat necessitatibus libero accusamus doloribus sit quos hic,
+            dolores voluptates veritatis voluptatum? Quibusdam praesentium omnis, cupiditate vero perspiciatis dolore
+            nesciunt fugiat quisquam hic eveniet natus dignissimos eos voluptate quae cum? Nulla deleniti dolor quod
+            voluptate nam, laudantium at ab reprehenderit suscipit ducimus fugit explicabo culpa quidem corporis!
+            Suscipit quis, officia nemo voluptatibus et accusantium quae animi nisi minima distinctio, voluptas iusto
+            praesentium. Aspernatur nihil asperiores fugiat architecto corporis natus officia totam aut aliquam.
+            Adipisci saepe esse sapiente mollitia quisquam necessitatibus porro aut suscipit dolores placeat vitae, quam
+            sunt similique iure, excepturi possimus aliquid voluptatem eligendi, a velit voluptates? Natus consequuntur
+            sint maiores recusandae dolorem fugit quos, sapiente error doloremque.</p>
+    </div>
+    <button id="btn" onclick="toggleHide()">Show/Hide</button>
+    <script>
+        let para = document.getElementById('para');
+        // mouseover example
+        para.addEventListener('mouseover', function run(){
+            alert('Mouse inside');
+        })
+        // mouseout example
+        para.addEventListener('mouseout', function run(){
+            alert('Mouse now went outside');
+        })
+        // for button display or hide
+        function toggleHide(){
+        //   let btn = document.getElementById('btn');
+        //   let para = document.getElementById('para');
+          if(para.style.display != 'none'){  //because para is defined so it can be used
+            para.style.display = 'none';
+          }
+          else{
+            para.style.display = 'block';
+          }
+        }
+    </script>
+
+</body>
+
+</html>
